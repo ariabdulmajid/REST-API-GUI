@@ -1,5 +1,8 @@
 package com.java.gui.restapigui;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import javax.swing.*;
@@ -66,7 +69,12 @@ public class RestApi extends JFrame {
                 String ip = txtIp.getText();
                 String path = txtPath.getText();
 
-                txtResponse.setText(ip+path);
+                String url = ip+path;
+
+                RestTemplate restTemplate = new RestTemplate();
+                ResponseEntity<Object> result = restTemplate.getForEntity(url, Object.class);
+
+                txtResponse.setText(result.getBody().toString());
             }
         });
 

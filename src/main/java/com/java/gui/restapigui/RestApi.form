@@ -32,9 +32,9 @@
       <component id="33042" class="javax.swing.JTextField" binding="txtPath">
         <constraints>
           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="200" height="30"/>
+            <minimum-size width="400" height="30"/>
             <preferred-size width="150" height="-1"/>
-            <maximum-size width="200" height="30"/>
+            <maximum-size width="400" height="30"/>
           </grid>
         </constraints>
         <properties>
@@ -203,6 +203,8 @@
             <properties>
               <background color="-131585"/>
               <lineWrap value="true"/>
+              <text value=""/>
+              <wrapStyleWord value="true"/>
             </properties>
           </component>
           <hspacer id="56df4">
